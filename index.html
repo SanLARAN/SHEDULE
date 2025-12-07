@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Расписание</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Всплывающий баннер -->
+        <div id="banner" class="banner hidden">
+            <div class="banner-content">
+                <button class="banner-close" onclick="closeBanner()">✕</button>
+                <img src="assets/banner.jpg" alt="Баннер" class="banner-image">
+                <div class="banner-text">
+                    <h3>Заголовок баннера</h3>
+                    <p>Описание или ссылка</p>
+                </div>
+                <a href="#" class="banner-button" target="_blank">Подробнее</a>
+            </div>
+        </div>
+
+        <!-- Шапка -->
+        <header class="header">
+            <h1>📚 Расписание</h1>
+            <div class="current-status" id="current-status">
+                <!-- Текущий статус -->
+            </div>
+        </header>
+
+        <!-- Выбор дня -->
+        <nav class="day-selector" id="day-selector">
+            <button class="day-btn" data-day="ПН">Пн</button>
+            <button class="day-btn" data-day="ВТ">Вт</button>
+            <button class="day-btn" data-day="СР">Ср</button>
+            <button class="day-btn" data-day="ЧТ">Чт</button>
+            <button class="day-btn" data-day="ПТ">Пт</button>
+            <button class="day-btn" data-day="СБ">Сб</button>
+        </nav>
+
+        <!-- Информация о дне -->
+        <div class="day-info" id="day-info">
+            <!-- Дата и количество уроков -->
+        </div>
+
+        <!-- Список уроков -->
+        <main class="schedule-list" id="schedule-list">
+            <!-- Уроки будут здесь -->
+        </main>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <span id="last-update"></span>
+        </footer>
+    </div>
+
+    <script src="js/schedule.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
